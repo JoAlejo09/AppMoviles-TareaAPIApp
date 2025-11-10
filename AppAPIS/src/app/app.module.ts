@@ -4,11 +4,13 @@ import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+//Firebase imports
 import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { environment } from 'src/environments/environment'; 
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from '../environments/environment'; 
 import { HttpClientModule } from '@angular/common/http';  
 
 
@@ -16,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule, HttpClientModule
+    AngularFireAuthModule,
+    HttpClientModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
