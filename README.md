@@ -2,6 +2,8 @@
 
 Este proyecto es una aplicación móvil híbrida desarrollada con **Ionic Angular**, que permite **consultar información climática y geográfica en tiempo real** utilizando APIs públicas y gratuitas.
 
+LINK DESPLIEGUE:  https://appmovilesappapis.web.app
+
 ---
 
 ## 🚀 Características principales
@@ -158,7 +160,7 @@ ionic capacitor build android
 
 ## 👨‍💻 Autor
 
-**José [Tu Apellido]**  
+**José Pila**  
 Estudiante de Desarrollo de Software  
 📍 Ecuador  
 📅 Proyecto académico — 2025
