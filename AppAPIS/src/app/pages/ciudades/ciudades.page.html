@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Buscador de Clima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Input para buscar ciudad -->
+  <ion-item>
+    <ion-input
+      placeholder="Escribe una ciudad (ej: Quito)"
+      [(ngModel)]="termino">
+    </ion-input>
+    <ion-button (click)="buscar()" color="tertiary">Buscar</ion-button>
+  </ion-item>
+
+  <!-- Lista de resultados -->
+  <ion-list *ngIf="ciudades.length > 0">
+    <ion-item button *ngFor="let c of ciudades" (click)="seleccionarCiudad(c)">
+      <ion-label>
+        <h2>{{ c.city }}, {{ c.country }}</h2>
+        <p>Lat: {{ c.latitude }}, Lon: {{ c.longitude }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Clima actual -->
+  <ion-card *ngIf="climaActual">
+    <ion-card-header>
+      <ion-card-title>Clima en {{ ciudadSeleccionada }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>🌡️ Temperatura: {{ climaActual.temperature_2m }} °C</p>
+      <p>🌧️ Precipitación: {{ climaActual.precipitation }} mm</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

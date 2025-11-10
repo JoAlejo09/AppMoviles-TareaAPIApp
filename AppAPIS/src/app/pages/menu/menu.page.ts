@@ -12,7 +12,7 @@ import { ToastController } from '@ionic/angular';
 export class MenuPage{
   apis = [
     {nombre: 'Dog API 🐶', route: '/dog-api', img:'/assets/dog-api.png'},
-    {nombre: 'Clima API ☁️', route: '/clima-api', img:'/assets/clima-api.png'},
+    {nombre: 'Ciudades 🌆', route: '/ciudades', img:'/assets/ciudades.png'},
   ]
 
   constructor(private router:Router, private auth:AuthService) { }

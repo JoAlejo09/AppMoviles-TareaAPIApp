@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'clima-api',
     loadChildren: () => import('./pages/clima-api/clima-api.module').then( m => m.ClimaApiPageModule)
   },
+  {
+    path: 'ciudades',
+    loadChildren: () => import('./pages/ciudades/ciudades.module').then( m => m.CiudadesPageModule)
+  },
  
 ];
 

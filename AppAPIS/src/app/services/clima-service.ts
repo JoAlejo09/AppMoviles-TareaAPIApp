@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ClimaService {
-private baseUrl = 'https://api.open-meteo.com/v1/forecast';
+/*private baseUrl = 'https://api.open-meteo.com/v1/forecast';
 
   constructor(private http: HttpClient) {}
 
@@ -20,5 +20,13 @@ private baseUrl = 'https://api.open-meteo.com/v1/forecast';
       `&timezone=auto`;
 
     return this.http.get<any>(url);
+  }*/
+ private apiUrl = 'https://api.open-meteo.com/v1/forecast';
+
+  constructor(private http: HttpClient) {}
+
+  obtenerClima(lat: number, lon: number): Observable<any> {
+    const url = `${this.apiUrl}?latitude=${lat}&longitude=${lon}&current=temperature_2m,precipitation&timezone=auto`;
+    return this.http.get(url);
   }
 }

@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   standalone: false,
 })
 export class ClimaApiPage {
-  //latitud y longitud de ejemplo Quito ecuador
+/*  //latitud y longitud de ejemplo Quito ecuador
   lat!: number;
   lon!: number;
   climaData: any = null;
@@ -58,5 +58,5 @@ obtenerDatos() {
   
   volverAlMenu() {
     this.router.navigate(['/menu']);
-  }
+  }*/
 }
