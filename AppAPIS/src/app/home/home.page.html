@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button (click)="salirApp()">Salir</ion-button>
+    </ion-buttons>
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <h1>AppAPIS</h1>
+  <h2>App que muestra las APIS </h2>
+  <p>Regístrate o inicia sesión para continuar</p>
+  <ion-button expand="block" color="success" (click)="goToLogin()">Iniciar Sesión</ion-button>
+  <ion-button expand="block" color="medium" (click)="goToRegister()">Registrarse</ion-button>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <h4 >Desarrollado por Jose Pila</h4>
+  </ion-toolbar>
